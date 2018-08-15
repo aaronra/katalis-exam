@@ -5,7 +5,15 @@ const Layout = ({content = () => null}) => (
   <main>
     <div className="container">
       <Online>{content()}</Online>
-      <Offline>Only shown offline (surprise!)</Offline>
+      <Offline>
+
+        <div className="row">
+          <div className="offline">
+            <h1>You're offline right now. Check your connection.</h1>
+          </div>
+        </div>
+
+      </Offline>
 
     </div>
   </main>

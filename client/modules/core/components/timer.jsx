@@ -13,7 +13,7 @@ class Timer extends React.Component {
     if (completed) {
       // Render a complete state
       return (<div className="timer">
-        <h1>You are Good to go!</h1>
+        <h1>00:00:00</h1>
       </div>);
     } else {
       // Render a countdown

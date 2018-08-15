@@ -19,7 +19,7 @@ html, body, #react-root {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
 }
 
-.timer {
+.timer,.offline {
   background-color: #f3f3f3;
   color: #c2b8c0;
   padding: 15px 25px;
@@ -32,6 +32,9 @@ html, body, #react-root {
     margin: 0 20px;
     font-weight: bold;
   }
+}
+.offline{
+  width: auto;
 }
 
 .full-height {
