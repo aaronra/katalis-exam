@@ -3,6 +3,9 @@ import {Offline, Online} from "react-detect-offline";
 
 const Layout = ({content = () => null}) => (
   <main>
+    <button type="button" className="btn btn-modal btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+      Change Date Time
+    </button>
     <div className="container">
       <Online>{content()}</Online>
       <Offline>

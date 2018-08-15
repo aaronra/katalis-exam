@@ -31,9 +31,6 @@ class Timer extends React.Component {
 
     return (
       <div className="row">
-        <button type="button" className="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-          Change Date Time
-        </button>
         <DatepickerModal id={timerDate._id} date={timerDate.timerDate}/>
         <div className="col-lg-12 full-height">
           <div className="center-block text-center">

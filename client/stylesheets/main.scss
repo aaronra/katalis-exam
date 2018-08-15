@@ -9,34 +9,38 @@ html, body, #react-root {
 }
 
 #react-root {
-  background: rgba(73,155,234,1);
-  background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
-  background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
-  background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
-  background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
-  background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+  background: linear-gradient(135deg, #ff0289 0%, #ffba00 84%);
 }
 
-.timer,.offline {
-  background-color: #f3f3f3;
-  color: #c2b8c0;
+.timer, .offline {
+
   padding: 15px 25px;
   width: 100%;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  span{
-    margin: 0 20px;
+  color: #ffffff;
+  .cd-number {
     font-weight: bold;
+    font-size: 5vw;
+    padding: 0.1em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 }
-.offline{
+
+.offline {
   width: auto;
 }
 
 .full-height {
   height: 100vh;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.btn-modal {
+  margin: 1em;
 }
