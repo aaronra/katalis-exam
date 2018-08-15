@@ -1,33 +1,52 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
+import TimerDate from './timer_data';
+import DatepickerModal from '../containers/datepicker_modal';
 
 class Timer extends React.Component {
   constructor(props) {
     super(props);
   }
-  renderer({days, hours, minutes, seconds, completed }) {
+
+  renderer({days, hours, minutes, seconds, completed}) {
+    const data = {days, hours, minutes, seconds};
     if (completed) {
-            // Render a complete state
-      return <span>You are good to go!</span>;
+      // Render a complete state
+      return (<div className="timer">
+        <h1>You are Good to go!</h1>
+      </div>);
     } else {
-            // Render a countdown
+      // Render a countdown
       return (
-                <span>
-        Days:{days} and
-        Hours:{hours}:{minutes}:{seconds}
-      </span>
-            );
+        <div className="timer">
+          <TimerDate timer={data}/>
+        </div>
+      );
     }
   }
 
 
   render() {
+    const {timerDate} = this.props;
+
     return (
-      <div>
-          <Countdown date={"Wed, 15 Aug 2018 12:00:03"} renderer={this.renderer} />
+      <div className="row">
+        <button type="button" className="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+          Change Date Time
+        </button>
+        <DatepickerModal id={timerDate._id} date={timerDate.timerDate}/>
+        <div className="col-lg-12 full-height">
+          <div className="center-block text-center">
+            <Countdown date={timerDate.timerDate} renderer={this.renderer}/>
+          </div>
+        </div>
       </div>
     );
   }
 }
+
+Timer.defaultProps = {
+  timerDate: '04/23/2019 12:00 AM',
+};
 
 export default Timer;
