@@ -12,4 +12,11 @@
   1. momentjs
   2. react-countdown-now
   3. react-detect-offline
-
+  
+**Setting Up:** How to setup and run the app
+ run this command
+ > ```bash
+ >  npm install && meteor
+ > ```
+ 
+ **NOTE:** app running on localhost:3000
