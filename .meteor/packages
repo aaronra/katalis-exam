@@ -24,3 +24,4 @@ fourseven:scss
 twbs:bootstrap
 tsega:bootstrap3-datetimepicker
 percolate:migrations
+mikowals:batch-insert
